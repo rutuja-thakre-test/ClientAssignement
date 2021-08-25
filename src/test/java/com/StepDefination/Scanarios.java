@@ -30,8 +30,9 @@ import io.restassured.response.Response;
 			JsonPath j = r.jsonPath();
 			String base  = j.get("base");		
 			Assert.assertEquals(base, "EUR");
-			
-		    System.out.println(j.get("rates.AED"));
+			float a = j.get("rates.AED");
+			System.out.println("a"+a);
+		  // System.out.println(j.get("rates.AED"));
 //		    Integer rates = j.get("rates");
 //		    Assert.assertEquals(rates, "AED");
 	
@@ -39,6 +40,8 @@ import io.restassured.response.Response;
 			Assert.assertEquals(statusCode, 200);
 			
 			System.out.println(r.getHeaders());
+			
+		
 	}}
 
 
